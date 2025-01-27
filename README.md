@@ -384,7 +384,11 @@ You should see an  array/list, which verified functionality and proves we were a
 
 2.Now, you can test all the API methods (GET, POST, PATCH and DELETE) using Postman.
 
-## To actually create an order, let’s test the POST method. Use Postman to make a POST request to the API endpoint, providing the color and price in the request body as show below —
+ To actually create an order, let’s test the POST method. 
+ 
+## Use postman to make a POST request to the API endpoint, providing the color and price in the request body as show below —
+
+
 
 
 ```language
@@ -396,6 +400,7 @@ You should see an  array/list, which verified functionality and proves we were a
 }
 
 ```
+
 
 The response will be a success message with a unique ProductId of the order placed.
 
