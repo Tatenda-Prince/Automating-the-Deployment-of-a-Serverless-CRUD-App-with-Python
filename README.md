@@ -95,7 +95,7 @@ Before we dive into the code, make sure to fork the project’s repository from 
 
 select lambda as the service 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/85833e22cded94c2bf70f043e87cee1d40c33536/img/Screenshot%202025-01-27%20124350.png)
 
 On add permissions choose both FullAccessDynamoDB and CloudWatchFullAcces
 As you can see we have to policies selected 
