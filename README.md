@@ -110,7 +110,7 @@ Name your policy and then click on create
 
 Now head back to your lambda function on under permission choose existing role and then proceed to create your function 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/a750b121d5fe7eac93398465738ed5c1668616a9/img/Screenshot%202025-01-27%20125819.png)
 
 
 Now that our lambda function is created
