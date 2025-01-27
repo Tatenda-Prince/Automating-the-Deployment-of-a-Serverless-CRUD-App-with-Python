@@ -355,7 +355,7 @@ After you have added all the methods you should have some that look like this
 
 5.Now let deploy the api gateway by creating new stage called "prod"
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/eb0993f9d8a459d3991fef54908991e7745821bc/img/Screenshot%202025-01-27%20134555.png)
 
 
 Now copy the URL and we will use it with Postman to query our DynamoDB table.
