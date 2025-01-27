@@ -327,8 +327,7 @@ The output should like the image shown below
 NOTE: always enable API GATEWAY CORS for all your Resources, shown below-
 
 
-
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/e8f77fd9e2350228536107ff840c94a528be7cc6/img/Screenshot%202025-01-27%20132309.png)
 
 
 After you have added all three resources you should have some that look like this 
