@@ -407,7 +407,7 @@ Verify that the new order was saved in the DynamoDB table by reviewing the items
 We can add more items to our table see the example below new 2 items were added to our table
 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/a380027647c217a9fec69018f90c41d9cf3cf66e/img/Screenshot%202025-01-27%20141600.png)
 
 
 Now lets test the GET Method to get a single product
