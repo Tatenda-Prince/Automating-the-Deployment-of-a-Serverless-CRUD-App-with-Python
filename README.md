@@ -340,8 +340,11 @@ After you have added all three resources you should have some that look like thi
 Under our three resources we are going to create Methods
 
 /health: GET
+
 /product: GET, POST, PATCH, DELETE
+
 /products: GET 
+
 
 NOTE: always enable LAMBDA PROXY INTEGRATION
 
