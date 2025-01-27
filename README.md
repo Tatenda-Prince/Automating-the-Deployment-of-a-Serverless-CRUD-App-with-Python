@@ -115,7 +115,7 @@ Now head back to your lambda function on under permission choose existing role a
 
 Now that our lambda function is created
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/d8862df162fa6e457a92e4eec02b192f5d351e94/img/Screenshot%202025-01-27%20125843.png)
 
 
 
