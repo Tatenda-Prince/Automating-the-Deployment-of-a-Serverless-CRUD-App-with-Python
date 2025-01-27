@@ -98,9 +98,9 @@ select lambda as the service
 ![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/85833e22cded94c2bf70f043e87cee1d40c33536/img/Screenshot%202025-01-27%20124350.png)
 
 On add permissions choose both FullAccessDynamoDB and CloudWatchFullAcces
-As you can see we have to policies selected 
+As you can see we have added two policies selected 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/6d42ba6c7f3c961279afa7248d3623edbeb6196e/img/Screenshot%202025-01-27%20124845.png)
 
 
 Name your policy and then click on create 
