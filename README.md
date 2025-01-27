@@ -360,7 +360,7 @@ After you have added all the methods you should have some that look like this
 
 Now copy the URL and we will use it with Postman to query our DynamoDB table.
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/9c00b48879511d6031ed5b4c20e110f7ed670c0e/img/Screenshot%202025-01-27%20134917.png)
 
 
 ## Step 4: Testing the API functionality using Postman
