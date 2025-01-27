@@ -412,7 +412,9 @@ We can add more items to our table see the example below new 2 items were added 
 
 Now lets test the GET Method to get a single product
 
-![image_alt]()
+productId = 10001
+
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/c85e0f790859c1b2bfd7e2b244f60e1163184f9f/img/Screenshot%202025-01-27%20142232.png)
 
 
 
