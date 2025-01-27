@@ -450,7 +450,7 @@ productId 10002
 You can also, verify that the productId was deleted from the DynamoDB table item.
 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/0e016dd6e22fa69355339db47e38a012e49fcfeb/img/Screenshot%202025-01-27%20143353.png)
 
 
 
