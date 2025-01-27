@@ -401,7 +401,7 @@ The response will be a success message with a unique ProductId of the order plac
 
 Verify that the new order was saved in the DynamoDB table by reviewing the items in the table —
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/f63cdc71c8a2edaec8f4b83daf53a43fed4c3e98/img/Screenshot%202025-01-27%20141310.png)
 
 
 We can add more items to our table see the example below new 2 items were added to our table
