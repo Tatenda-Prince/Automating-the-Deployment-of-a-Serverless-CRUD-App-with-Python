@@ -373,7 +373,7 @@ To retrieve (GET) HEALTH status for our API Gateway , head to your browser, ente
 https://xb0z3q5le4.execute-api.us-east-1.amazonaws.com/prod/health
 ```
 
-![imaga_alt]()
+![imaga_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/6b112059e8a438f8f59a7ff975819e6668b9bda1/img/Screenshot%202025-01-27%20140259.png)
 
 
 You should see an  array/list, which verified functionality and proves we were able to receive information  "Health check successful".
