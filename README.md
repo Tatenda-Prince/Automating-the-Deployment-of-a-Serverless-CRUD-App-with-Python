@@ -437,7 +437,7 @@ You can also, verify that the productId status was updated from the DynamoDB tab
 indeed the price was changed to 1000
 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/e203ffaa1407d830cf817130786c4bd773a71444/img/Screenshot%202025-01-27%20142944.png)
 
 
 Now lets test the DELETE Method for a single item in the table 
