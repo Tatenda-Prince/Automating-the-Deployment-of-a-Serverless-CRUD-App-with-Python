@@ -306,6 +306,176 @@ The output should like the image shown below
 4.After you are done pasting your code click on deploy
 
 
+## Step 3: API Gateway Configuration
+
+1.Search for "API Gateway" on your aws console home and click on create Function 
+
+2.Select "REST API" and then click on "build"
+
+![image_alt]()
+
+
+3.Create API enter the name of your api leave everything as default and click create 
+
+![image_alt]
+
+
+4.Now lets create Resources /health,/product and /products  
+
+NOTE: always enable API GATEWAY CORS for all your Resources, shown below 
+
+
+![image_alt]()
+
+
+After you have added all three resources you should have some that look like this 
+
+
+![image_alt]
+
+
+
+
+Under our three resources we are going to create Methods
+
+/health: GET
+/product: GET, POST, PATCH, DELETE
+/products: GET 
+
+NOTE: always enable LAMBDA PROXY INTEGRATION
+
+![image_alt]()
+
+
+After you have added all the methods you should have some that look like this 
+
+![image_alt]()
+
+
+5.Now let deploy the api gateway by creating new stage called "prod"
+
+![image_alt]()
+
+
+Now copy the URL and we will use it with Postman to query our DynamoDB table.
+
+![image_alt]()
+
+
+## Step 4: Testing the API functionality using Postman
+
+1.Now that the API and other resources are deployed and configured, we need to locate the unique API endpoint (URL) AWS generates before we can begin making requests. We will use this URL to test it’s functionality by simply pasting it in a web browser.
+
+To retrieve (GET) HEALTH status for our API Gateway , head to your browser, enter the URL and make sure to add the resource “/health” at the end, as shown in the example below —
+
+```language
+https://xb0z3q5le4.execute-api.us-east-1.amazonaws.com/prod/health
+```
+
+![imaga_alt]()
+
+
+You should see an  array/list, which verified functionality and proves we were able to receive information  "Health check successful".
+
+
+2.Now, you can test all the API methods (GET, POST, PATCH and DELETE) using Postman.
+
+To actually create an order, let’s test the POST method. Use Postman to make a POST request to the API endpoint, providing the customer’s name and coffee blend in the request body as show below —
+
+
+```language
+
+{
+    "productId" : "10001",
+    "color":"red",
+    "price": 100
+}
+
+```
+
+The response will be a success message with a unique ProductId of the order placed.
+
+![image_alt]()
+
+
+Verify that the new order was saved in the DynamoDB table by reviewing the items in the table —
+
+![image_alt]()
+
+
+We can add more items to our table see the example below new 2 items were added to our table
+
+
+![image_alt]()
+
+
+Now lets test the GET Method to get a single product
+
+![image_alt]()
+
+
+
+Now lets test the GET Method to get a single product not in the table 
+
+we get a 404 error 
+
+
+![image_alt]()
+
+
+Now lets test the UPDATE Method for a single item in the table 
+
+![image_alt]()
+
+
+You can also, verify that the productId status was updated from the DynamoDB table item.
+
+indeed the price was changed to 1000
+
+
+![image_alt]()
+
+
+Now lets test the DELETE Method for a single item in the table 
+
+productId 10002
+
+![image_alt]()
+
+
+You can also, verify that the productId was deleted from the DynamoDB table item.
+
+
+![image_alt]()
+
+
+
+Now lets test the GET Method to get all the remaining items in the table 
+
+![image_alt]()
+
+
+all the remaining items have been returned successfully 
+
+
+Congratulations!
+
+That’s it! You’ve successfully completed “Building a Serverless Backend”. We’ve utilized lambda, Python, to automate the provisioning of a serverless CRUD application using AWS’s native serverless services API Gateway, Lambda and DynamoDB!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
