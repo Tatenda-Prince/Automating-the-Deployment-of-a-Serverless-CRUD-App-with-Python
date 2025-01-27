@@ -396,7 +396,7 @@ To actually create an order, let’s test the POST method. Use Postman to make a
 
 The response will be a success message with a unique ProductId of the order placed.
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/da87142c0b12ff9165a0e827fbd5fb9482a12832/img/Screenshot%202025-01-27%20140956.png)
 
 
 Verify that the new order was saved in the DynamoDB table by reviewing the items in the table —
