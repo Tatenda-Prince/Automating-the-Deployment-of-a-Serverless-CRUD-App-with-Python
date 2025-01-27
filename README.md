@@ -423,12 +423,13 @@ Now lets test the GET Method to get a single product not in the table
 we get a 404 error 
 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/33fb604872ce52a4a8e8f1a6da5d0cd2df83d36b/img/Screenshot%202025-01-27%20142336.png)
 
 
-Now lets test the UPDATE Method for a single item in the table 
+Now lets test the UPDATE Method for a single item in the table by modifying it 
 
-![image_alt]()
+
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/33fb604872ce52a4a8e8f1a6da5d0cd2df83d36b/img/Screenshot%202025-01-27%20142336.png)
 
 
 You can also, verify that the productId status was updated from the DynamoDB table item.
