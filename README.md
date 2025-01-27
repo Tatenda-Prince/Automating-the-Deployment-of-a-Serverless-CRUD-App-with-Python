@@ -11,10 +11,19 @@ Introducing Slim, the developer who has now mastered the basics of AWS Lambda! B
 
 ## What is the Backend
 
- When it comes to web application development, the backend is the engine behind the scenes that makes the web application function. It is responsible for data storage, business logic and handling user requests.
+ When it comes to web application development, the BACKEND is the engine behind the scenes that makes the web application function. It is responsible for data storage, business logic and handling user requests.
 
-It differs from the frontend, which is the user-facing part that allows users to interact with and use the application directly in their web browsers, as the backend is responsible for managing and serving the relevant data to the frontend.
+It differs from the FRONTEND, which is the user-facing part that allows users to interact with and use the application directly in their web browsers, as the backend is responsible for managing and serving the relevant data to the frontend.
 
-Both frontend and backend work together to create a web application.
+Both FRONTEND and BACKEND work together to create a web application.
 
 ## Understanding a Serverless Backend
+
+SLim realizes in recent years, serverless architecture has emerged as a powerful and efficient way to build backends for web applications, offering a more modern approach to web application development. Applying what she recently learned of the fundamentals of AWS serverless — “serverless doesn’t mean there are no servers involved, rather, it just abstracts away the management and provisioning of servers”, he wants to focus solely on writing code and implementing business logic.
+
+
+## Let’s explore how Slim, the owner of a thriving online book shop, begins to leverage a serverless architecture for the backend of her web application.
+
+Slim’s Book shop, an online book shop, offers an array of delightful friction and non friction novels. Initially, Slim manages the shop’s orders and inventory with traditional web hosting services and operations, where she handles multiple servers and resources. As his book shop gains popularity, he faces an increasing number of orders, especially during peak hours and seasonal promotions.
+
+
