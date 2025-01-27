@@ -70,5 +70,248 @@ Slim’s main objectives are to automate the entire set up of the serverless CRU
 
 Before we dive into the code, make sure to fork the project’s repository from Slim’s GitHub. You can make necessary edits to the files to personalize them as we progress:https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python.git
 
+## Step 1: Create a DynamoDB Table to store coffee order details
+
+1.Navigate to your AWS Console and search for "DynamoDB" and click on create table
+
+2.Enter yout table and the Partition Key as "ProductId" and leave everything as default, click on create table 
+
+![image_alt]()
+
+3.Now that the DynamoDB table is active as shown below we can now go ahead to create our Lambda Fuction
+
+![image_alt]()
+
+
+## Step 2: Create Lambda functions for API methods GET, POST, PUT and DELETE
+
+1.Search for "lambda" on your aws console home and click on create Function 
+
+2.Choose "Author from Scratch" option and Runtime choose python "3.9
+
+![image_alt]()
+
+3.On Permission we are going to create a new lambda role with FullAccessDynamoDB and CloudWatchFullAcces and click on create new role 
+
+select lambda as the service 
+
+![image_alt]()
+
+On add permissions choose both FullAccessDynamoDB and CloudWatchFullAcces
+As you can see we have to policies selected 
+
+![image_alt]()
+
+
+Name your policy and then click on create 
+
+![image_alt]()
+
+
+Now head back to your lambda function on under permission choose existing role and then proceed to create your function 
+
+![image_alt]()
+
+
+Now that our lambda function is created
+
+![image_alt]()
+
+
+
+
+copy and paste the code below, delete the default code and paste the one below 
+
+```python
+import boto3
+import json
+from custom_encoder import CustomEncoder
+import logging
+
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+
+dynamodbTableName = 'product-inventory'
+dynamodb = boto3.resource('dynamodb')
+table = dynamodb.Table(dynamodbTableName)
+
+getMethod = 'GET'
+postMethod = 'POST'
+patchMethod = 'PATCH'
+deleteMethod = 'DELETE'
+healthPath = '/health'
+productPath = '/product'
+productsPath = '/products'
+
+
+def lambda_handler(event, context):
+    logger.info(event)
+    httpMethod = event['httpMethod']
+    path = event['path']
+    
+    if httpMethod == getMethod and path == healthPath:
+        response = buildResponse(200, {"message": "Health check successful"})
+    elif httpMethod == getMethod and path == productPath:
+        productId = event['queryStringParameters'].get('productId') if event.get('queryStringParameters') else None
+        if productId:
+            response = getProduct(productId)
+        else:
+            response = buildResponse(400, {"error": "Missing productId in query string"})
+    elif httpMethod == getMethod and path == productsPath:
+        response = getProducts()
+    elif httpMethod == postMethod and path == productPath:
+        response = saveProducts(json.loads(event['body']))
+    elif httpMethod == patchMethod and path == productPath:
+        requestBody = json.loads(event['body'])
+        response = modifyProduct(requestBody['productId'], requestBody['updateKey'], requestBody['updateValue'])
+    elif httpMethod == deleteMethod and path == productPath:
+        requestBody = json.loads(event['body'])
+        response = deleteProduct(requestBody['productId'])
+    else:
+        response = buildResponse(404, {"error": "Not Found"})
+        
+    return response
+
+
+def getProduct(productId):
+    try:
+        response = table.get_item(
+            Key={
+                'productId': productId
+            }
+        )
+        if 'Item' in response:
+            return buildResponse(200, response['Item'])
+        else:
+            return buildResponse(404, {'error': f'ProductId {productId} not found'})
+    except Exception as e:
+        logger.exception("Error retrieving product")
+        return buildResponse(500, {'error': str(e)})
+
+
+def getProducts():
+    try:
+        response = table.scan()
+        result = response['Items']
+        
+        while 'LastEvaluatedKey' in response:
+            response = table.scan(ExclusiveStartKey=response['LastEvaluatedKey'])
+            result.extend(response['Items'])
+        
+        body = {
+            'products': result
+        }
+        return buildResponse(200, body)
+    except Exception as e:
+        logger.exception("Error retrieving products")
+        return buildResponse(500, {'error': str(e)})
+
+
+def saveProducts(requestBody):
+    try:
+        table.put_item(Item=requestBody)
+        body = {
+            'operation': 'SAVE',
+            'message': 'SUCCESS',
+            'item': requestBody
+        }
+        return buildResponse(200, body)
+    except Exception as e:
+        logger.exception("Error saving product")
+        return buildResponse(500, {'error': str(e)})
+
+
+def modifyProduct(productId, updateKey, updateValue):
+    try:
+        response = table.update_item(
+            Key={
+                'productId': productId
+            },
+            UpdateExpression=f'set {updateKey} = :value',
+            ExpressionAttributeValues={
+                ':value': updateValue
+            },
+            ReturnValues='UPDATED_NEW'
+        )
+        
+        body = {
+            'operation': 'UPDATE',
+            'message': 'SUCCESS',
+            'updatedAttributes': response['Attributes']
+        }
+        return buildResponse(200, body)
+    except Exception as e:
+        logger.exception("Error updating product")
+        return buildResponse(500, {'error': str(e)})
+
+
+def deleteProduct(productId):
+    try:
+        response = table.delete_item(
+            Key={
+                'productId': productId
+            },
+            ReturnValues='ALL_OLD'
+        )
+        
+        if 'Attributes' in response:
+            body = {
+                'operation': 'DELETE',
+                'message': 'SUCCESS',
+                'deletedItem': response['Attributes']
+            }
+            return buildResponse(200, body)
+        else:
+            return buildResponse(404, {'error': f'ProductId {productId} not found'})
+    except Exception as e:
+        logger.exception("Error deleting product")
+        return buildResponse(500, {'error': str(e)})
+
+
+def buildResponse(statusCode, body=None):
+    response = {
+        'statusCode': statusCode,
+        'headers': {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+        }
+    }
+    if body is not None:
+        response['body'] = json.dumps(body, cls=CustomEncoder)
+    return response
+```
+
+under lambda code block create a new python file and name it custom_encoder.py 
+
+again copy the code below and paste it on your new file
+
+```python
+import json
+
+from decimal import Decimal
+
+
+class CustomEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, Decimal):
+            return float()
+        
+        return json.JSONEncoder.default(self,obj)
+```
+
+The output should like the image shown below
+
+![image_alt]()
+
+4.After you are done pasting your code click on deploy
+
+
+
+
+
+
+
+
+
 
 
