@@ -76,7 +76,7 @@ Before we dive into the code, make sure to fork the project’s repository from 
 
 2.Enter yout table and the Partition Key as "ProductId" and leave everything as default, click on create table 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/981239d36a531f42eafd661dce2e743478c772d0/img/Screenshot%202025-01-27%20122412.png)
 
 3.Now that the DynamoDB table is active as shown below we can now go ahead to create our Lambda Fuction
 
