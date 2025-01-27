@@ -89,7 +89,7 @@ Before we dive into the code, make sure to fork the project’s repository from 
 
 2.Choose "Author from Scratch" option and Runtime choose python "3.9
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/69d1d882fbe3b7d02f543651550247ba8f554046/img/Screenshot%202025-01-27%20124007.png)
 
 3.On Permission we are going to create a new lambda role with FullAccessDynamoDB and CloudWatchFullAcces and click on create new role 
 
