@@ -456,7 +456,7 @@ You can also, verify that the productId was deleted from the DynamoDB table item
 
 Now lets test the GET Method to get all the remaining items in the table 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/c045df73af1e768a49620e8e5e71d77c40ba30db/img/Screenshot%202025-01-27%20143819.png)
 
 
 all the remaining items have been returned successfully 
