@@ -312,7 +312,7 @@ The output should like the image shown below
 
 2.Select "REST API" and then click on "build"
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/f49269403d23b71a853474214a7e0cf5bc59c101/img/Screenshot%202025-01-27%20131700.png)
 
 
 3.Create API enter the name of your api leave everything as default and click create 
