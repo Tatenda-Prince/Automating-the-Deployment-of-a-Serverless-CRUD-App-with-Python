@@ -350,7 +350,7 @@ NOTE: always enable LAMBDA PROXY INTEGRATION
 
 After you have added all the methods you should have some that look like this 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/a4f8339483d27c71d6b602805c3107ca64506a58/img/Screenshot%202025-01-27%20134345.png)
 
 
 5.Now let deploy the api gateway by creating new stage called "prod"
