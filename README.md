@@ -345,7 +345,7 @@ Under our three resources we are going to create Methods
 
 NOTE: always enable LAMBDA PROXY INTEGRATION
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/3c11de60a8e73bccd68d0f873aa1ec9400e4ea58/img/Screenshot%202025-01-27%20133625.png)
 
 
 After you have added all the methods you should have some that look like this 
