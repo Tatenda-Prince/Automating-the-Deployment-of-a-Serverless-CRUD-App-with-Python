@@ -80,7 +80,7 @@ Before we dive into the code, make sure to fork the project’s repository from 
 
 3.Now that the DynamoDB table is active as shown below we can now go ahead to create our Lambda Fuction
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/21042f8b7b0ced546643287f701f4b3acc4adc14/img/Screenshot%202025-01-27%20123130.png)
 
 
 ## Step 2: Create Lambda functions for API methods GET, POST, PUT and DELETE
