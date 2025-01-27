@@ -68,7 +68,7 @@ Slim’s main objectives are to automate the entire set up of the serverless CRU
 
 5.Test the API using Postman
 
-Before we dive into the code, make sure to fork the project’s repository from Slim’s GitHub. You can make necessary edits to the files to personalize them as we progress:
+Before we dive into the code, make sure to fork the project’s repository from Slim’s GitHub. You can make necessary edits to the files to personalize them as we progress:https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python.git
 
 
 
