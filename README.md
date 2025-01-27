@@ -444,7 +444,7 @@ Now lets test the DELETE Method for a single item in the table
 
 productId 10002
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/2e4e35f43f3de89b92bf6f06fbae363c88098bea/img/Screenshot%202025-01-27%20143315.png)
 
 
 You can also, verify that the productId was deleted from the DynamoDB table item.
