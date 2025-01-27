@@ -384,7 +384,7 @@ You should see an  array/list, which verified functionality and proves we were a
 
 2.Now, you can test all the API methods (GET, POST, PATCH and DELETE) using Postman.
 
-To actually create an order, let’s test the POST method. Use Postman to make a POST request to the API endpoint, providing the customer’s name and coffee blend in the request body as show below —
+## To actually create an order, let’s test the POST method. Use Postman to make a POST request to the API endpoint, providing the color and price in the request body as show below —
 
 
 ```language
@@ -413,7 +413,7 @@ We can add more items to our table see the example below new 2 items were added 
 ![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/a380027647c217a9fec69018f90c41d9cf3cf66e/img/Screenshot%202025-01-27%20141600.png)
 
 
-Now lets test the GET Method to get a single product
+## Now lets test the GET Method to get a single product
 
 productId = 10001
 
@@ -421,7 +421,7 @@ productId = 10001
 
 
 
-Now lets test the GET Method to get a single product not in the table 
+## Now lets test the GET Method to get a single productId that is not in the table 
 
 we get a 404 error 
 
@@ -429,7 +429,7 @@ we get a 404 error
 ![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/33fb604872ce52a4a8e8f1a6da5d0cd2df83d36b/img/Screenshot%202025-01-27%20142336.png)
 
 
-Now lets test the UPDATE Method for a single item in the table by modifying it 
+## Now lets test the UPDATE Method for a single item in the table by modifying it 
 
 
 ![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/1ac0165d32934afdf5349a89226d0f8bc15a5b6a/img/Screenshot%202025-01-27%20142808.png)
@@ -443,7 +443,7 @@ indeed the price was changed to 1000
 ![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/e203ffaa1407d830cf817130786c4bd773a71444/img/Screenshot%202025-01-27%20142944.png)
 
 
-Now lets test the DELETE Method for a single item in the table 
+## Now lets test the DELETE Method for a single item in the table 
 
 productId 10002
 
@@ -457,7 +457,7 @@ You can also, verify that the productId was deleted from the DynamoDB table item
 
 
 
-Now lets test the GET Method to get all the remaining items in the table 
+## Now lets test the GET Method to get all the remaining items in the table 
 
 ![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/c045df73af1e768a49620e8e5e71d77c40ba30db/img/Screenshot%202025-01-27%20143819.png)
 
