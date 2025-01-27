@@ -301,7 +301,7 @@ class CustomEncoder(json.JSONEncoder):
 
 The output should like the image shown below
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python/blob/7b3ea59cc7c1397934c0800a189b1bf6157d3ef6/img/Screenshot%202025-01-27%20130757.png)
 
 4.After you are done pasting your code click on deploy
 
