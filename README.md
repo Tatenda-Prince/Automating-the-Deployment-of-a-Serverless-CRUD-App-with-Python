@@ -1,4 +1,4 @@
-# Automating-the-Deployment-of-a-Serverless-CRUD-App-with-Python
+# Automated Serverless CRUD Application Deployment with Python and AWS
 
 "Building a Serverless Backend"
 
